@@ -6,7 +6,7 @@ class Task extends Component {
         const styles = this.props.mruczek ? {textDecoration: 'line-through'} : {}
         return (
             <div>
-                <p style={styles}>{this.props.fafik}</p>
+                <p style={styles}>{this.props.fafik} <input type='checkbox'></input> </p>
             </div>
         )
     }

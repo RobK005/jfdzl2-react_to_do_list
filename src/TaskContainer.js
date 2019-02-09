@@ -15,13 +15,6 @@ class TaskContainer extends Component {
     render() {
         return (
             <div>
-
-                {/* <Task fafik='Zakupy'/>
-                <Task fafik='Odkurzyć'/>
-                <Task fafik='Nauczyć Reacta'/> */}
-
-                {/* --podobny zapis jest ponizej z metoda map-- */}
-
                 {this.state.tasks.map(task => (
                     <Task
                     key={`t-${task.id}`}
