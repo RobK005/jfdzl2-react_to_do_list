@@ -12,14 +12,21 @@ class TaskContainer extends Component {
         ]
     }
 
+    handleChange = (event, taskId) => {
+        console.log('Kliknięto mnie', taskId)
+        console.log(event.target.checked)
+
+        // this.props.task.completed = event.target.checked
+    }
+
     render() {
         return (
             <div>
                 {this.state.tasks.map(task => (
                     <Task
                     key={`t-${task.id}`}
-                    fafik={task.name}
-                    mruczek={task.completed}
+                    task={task}
+                    handleChange={(event) => this.handleChange(event, task.id)}
                     />
                 ))}
             </div>

@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 
 class Task extends Component {
 
-    handleChange = (event) => {
-        console.log('Kliknięto mnie')
-        console.log(event.target.checked)
-    }
-
     render() {
         const styles = this.props.mruczek ? {textDecoration: 'line-through'} : {}
         return (
@@ -14,11 +9,11 @@ class Task extends Component {
                 <p style={styles}>
                     <input
                         type='checkbox'
-                        checked={this.props.mruczek}
-                        onChange={this.handleChange}
+                        checked={this.props.task.completed}
+                        onChange={this.props.handleChange}
 
                     />
-                    {this.props.fafik}
+                    {this.props.task.name}
                 </p>
             </div>
         )
