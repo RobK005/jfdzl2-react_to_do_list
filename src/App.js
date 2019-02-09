@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TaskContainer from './TaskContainer'
+import CreateTask from './CreateTask'
 
 class App extends Component {
 
@@ -30,6 +31,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <CreateTask/>
         <TaskContainer
           todos={this.state.tasks}
           handleChange={this.handleChange}
