@@ -28,10 +28,19 @@ class App extends Component {
     this.setState({ tasks: tasks }) // this.setState({ tasks })
   }
 
+  handleCreate = (name) => {
+    //console.log('Task name: ', name);
+    const uuId = Math.floor(Math.random() * 10000)
+    const tasks = [...this.state.tasks]
+    const task = { id: uuId, name: name, completed: false}
+    tasks.push(task)
+    this.setState({tasks: tasks})
+  }
+
   render() {
     return (
       <div className="App">
-        <CreateTask/>
+        <CreateTask createHandler={this.handleCreate}/>
         <TaskContainer
           todos={this.state.tasks}
           handleChange={this.handleChange}
