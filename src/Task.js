@@ -15,7 +15,7 @@ class Task extends Component {
                     />
                     {this.props.task.name}
                 </p>
-                <button onClick={this.props.handleRemove}>XXX</button>
+                <button onClick={this.props.handleRemove}>Remove</button>
             </div>
         )
     }

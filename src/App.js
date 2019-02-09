@@ -38,7 +38,10 @@ class App extends Component {
   }
 
   handleRemove = (taskId) => {
-    
+    const taskIndex = this.state.tasks.findIndex(task => task.id === taskId)
+    const tasks = [...this.state.tasks]
+    tasks.splice(taskIndex, 1)
+    this.setState({tasks})
   }
 
   render() {
