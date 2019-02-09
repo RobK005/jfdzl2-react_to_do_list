@@ -6,7 +6,7 @@ class TaskContainer extends Component {
     state = {
         day: 'sobota',
         tasks: [
-            { id: 1, name:'Zakupy', completed: false},
+            { id: 1, name:'Zakupy', completed: true},
             { id: 2, name:'Odkurzyć', completed: false},
             { id: 3, name:'Nauczyć Reacta', completed: false}
         ]
@@ -23,7 +23,11 @@ class TaskContainer extends Component {
                 {/* --podobny zapis jest ponizej z metoda map-- */}
 
                 {this.state.tasks.map(task => (
-                    <Task key={`t-${task.id}`} fafik={task.name}/>
+                    <Task
+                    key={`t-${task.id}`}
+                    fafik={task.name}
+                    mruczek={task.completed}
+                    />
                 ))}
             </div>
         )
