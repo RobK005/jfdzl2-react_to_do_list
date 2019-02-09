@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Task extends Component {
 
     render() {
-        const styles = this.props.mruczek ? {textDecoration: 'line-through'} : {}
+        const styles = this.props.task.completed ? { textDecoration: 'line-through' } : {}
         return (
             <div>
                 <p style={styles}>
