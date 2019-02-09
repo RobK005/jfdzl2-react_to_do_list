@@ -2,8 +2,18 @@ import React, { Component } from 'react';
 
 class CreateTask extends Component {
 
+    state = {
+        name: ''
+    }
+
     handleChange = (event) => {
-        console.log(event.target.value)
+        console.log({name: event.target.value})
+    }
+
+    keyDown = (event) => {
+        if (event.keyCode === 13) { //klawisz enter
+
+        }
     }
 
     render() {
@@ -12,6 +22,7 @@ class CreateTask extends Component {
                 <input
                     type='text'
                     onChange={this.handleChange}
+                    onKeyDown={this.keyDown}
                 />
             </div>
         )
