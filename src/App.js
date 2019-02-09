@@ -37,6 +37,10 @@ class App extends Component {
     this.setState({tasks: tasks})
   }
 
+  handleRemove = (taskId) => {
+    
+  }
+
   render() {
     return (
       <div className="App">
@@ -44,6 +48,7 @@ class App extends Component {
         <TaskContainer
           todos={this.state.tasks}
           handleChange={this.handleChange}
+          handleRemove={this.handleRemove}
         />
       </div>
     );

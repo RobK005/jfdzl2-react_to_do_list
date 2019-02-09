@@ -11,6 +11,7 @@ class TaskContainer extends Component {
                         key={`t-${task.id}`}
                         task={task}
                         handleChange={(event) => this.props.handleChange(event, task.id)}
+                        handleRemove={() => this.props.handleRemove(task.id)}
                     />
                 ))}
             </div>
